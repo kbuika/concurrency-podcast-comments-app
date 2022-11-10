@@ -7,7 +7,6 @@ function Episode0() {
   useLayoutEffect(() => {
     if (pagePainted) return;
     setPagePainted(true);
-    console.log("comments", pagePainted);
     let script = document.createElement("script");
     let anchor = document.getElementById("utterances-comments");
     script.setAttribute("src", "https://utteranc.es/client.js");
@@ -24,16 +23,16 @@ function Episode0() {
   return (
     <div className="bg-zinc-100	w-100 m-0 p-2 min-h-screen pt-12">
       <div style={{ width: "100%" }}>
-        <div className="flex flex-col justify-center items-center ml-12">
+        <div className="flex flex-col justify-center items-center md:ml-12 sm:ml-0">
         <iframe
           style={{ borderRadius: "12px" }}
           src="https://open.spotify.com/embed/episode/4hHPmf8L9GLQzb4cA1O4ab?utm_source=generator"
-          width="70%"
           height="180"
           frameBorder="0"
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
+          className="lg:w-3/4 md:w-1/2 sm:w-full"
         ></iframe>
         </div>
         
